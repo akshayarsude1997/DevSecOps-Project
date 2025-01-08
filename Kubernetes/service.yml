@@ -5,10 +5,10 @@ metadata:
   labels:
     app: netflix-app
 spec:
-  type: NodePort
+  type: LoadBalancer  # Change this from NodePort to LoadBalancer
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 30007
   selector:
     app: netflix-app
+
